@@ -337,7 +337,7 @@ begin
         srcMacAddr => srcMacAddr,
         desMacAddr => desMacAddr,
         srcPort => srcPort,
-        desPort => srcPort,
+        desPort => desPort,
         -- Interface to Application layer
         --------------------------------------------
         -- For send

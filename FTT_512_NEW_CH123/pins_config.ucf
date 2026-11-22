@@ -168,13 +168,12 @@ NET "latch_pulse_test"       LOC = "K4"  |IOSTANDARD=LVCMOS33  ;    #pin 6
 NET "rfd_ch1"              LOC = "F3"  |IOSTANDARD=LVCMOS33  ;    #pin 9
 NET "dv_ch1" LOC = "A14" |IOSTANDARD=LVCMOS33  ;    #pin 11
 
-
-
-
-
-
-
-
-
-
-
+#----------------------- TIMING CONSTRAINTS ------------------------------
+# Truoc day thiet ke KHONG co rang buoc thoi gian nao (top.twr: "No timing
+# constraints found") nen PAR khong he kiem tra 230 MHz.
+# MMCM (clk_zoomer) tao 3 clock 230 MHz tu clk_in 100 MHz; ISE tu suy ra
+# rang buoc cho cac clock dau ra tu PERIOD cua clk_in.
+NET "clk_in" TNM_NET = "TNM_clk_in";
+TIMESPEC "TS_clk_in" = PERIOD "TNM_clk_in" 10 ns HIGH 50%;
+# pulse_detect la tin hieu bat dong bo, da duoc dong bo 2 FF trong FFT_CH
+NET "pulse_detect" TIG;
