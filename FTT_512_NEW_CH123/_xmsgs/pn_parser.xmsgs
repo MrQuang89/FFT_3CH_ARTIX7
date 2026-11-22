@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/Ethernet_module.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/FFT512_CH3.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/FFT_512_CH1.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/FFT_512_CH2.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/fifo_fsm_controller_ch3.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/fsm_fifo_controller.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/fsm_fifo_controller_ch2.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/main_prog.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+

@@ -1,0 +1,640 @@
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ipcore_dir -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_2504/FFT_512_05052025/FFT_512_EDIT_06052025/FTT_512_NEW/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/Netlist -sd ../../../../../FFT_01_CHANNELS/FFT-512-05032025/FFT_230MHZ/ipcore_dir -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.xst" -ofn "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc pins_config.ucf -p xc7a100t-fgg484-3 "top.ngc" top.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf pins_config.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 

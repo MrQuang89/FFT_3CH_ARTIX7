@@ -1,0 +1,180 @@
+
+#----------------100 MHz clk----------------------------------
+NET "clk_in" LOC = W4;
+NET "clk_in" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "clk_in" IOSTANDARD = LVCMOS25;
+
+NET "pulse_detect" LOC = W20;
+NET "pulse_detect" IOSTANDARD = LVCMOS25;
+
+#-------------------------ethernet--------------------------------
+#
+#NET "TXD[0]" LOC = "J22"|IOSTANDARD=LVTTL ;
+#NET "TXD[1]" LOC = "K21"|IOSTANDARD=LVTTL ;
+#NET "TX_EN" LOC = "J21" |IOSTANDARD=LVTTL ;
+#NET "CRS_DV" LOC = "G21"|IOSTANDARD=LVTTL ;
+#NET "RXD[0]" LOC = "G22"|IOSTANDARD=LVTTL ;
+#NET "RXD[1]" LOC = "H22"|IOSTANDARD=LVTTL ;
+#NET "E_EX_CLK" LOC = "E22"|IOSTANDARD=LVTTL ;
+
+#------------ethernet 2------------
+NET "TXD_02[0]" LOC = "D22"|IOSTANDARD=LVTTL ;
+NET "TXD_02[1]" LOC = "E21"|IOSTANDARD=LVTTL ;
+NET "TX_EN_02" LOC = "D21" |IOSTANDARD=LVTTL ;
+NET "CRS_DV_02" LOC = "B21"|IOSTANDARD=LVTTL ;
+NET "RXD_02[0]" LOC = "B22"|IOSTANDARD=LVTTL ;
+NET "RXD_02[1]" LOC = "C22"|IOSTANDARD=LVTTL ;
+NET "E_EX_CLK_02" LOC = "A21"|IOSTANDARD=LVTTL ;
+
+#--------------------------ADC 1-------------------------------------
+
+NET "adc1_clkp" LOC = V17;
+NET "adc1_clkn" LOC = W17;
+NET "adc1_clkp" IOSTANDARD = LVCMOS25;
+NET "adc1_clkn" IOSTANDARD = LVCMOS25;
+
+NET "adc1_clk_out_n" LOC = Y19;
+NET "adc1_clk_out_n" IOSTANDARD = LVCMOS25;
+
+NET "adc1_clk_out_p" LOC = Y18;
+NET "adc1_clk_out_p" IOSTANDARD = LVCMOS25;
+####
+NET "adc_in1[0]" LOC = W22;
+NET "adc_in1[1]" LOC = W21;
+NET "adc_in1[2]" LOC = Y22;
+NET "adc_in1[3]" LOC = Y21;
+NET "adc_in1[4]" LOC = AB22;
+NET "adc_in1[5]" LOC = AB21;
+NET "adc_in1[6]" LOC = AB20;
+NET "adc_in1[7]" LOC = AA19;
+NET "adc_in1[8]" LOC = AB18;
+NET "adc_in1[9]" LOC = AA18;
+NET "adc_in1[10]" LOC = U21;
+NET "adc_in1[11]" LOC = T21;
+NET "adc_in1[12]" LOC = AA21;
+NET "adc_in1[13]" LOC = AA20;
+#
+NET "adc_in1[13]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[12]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[11]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[10]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[9]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[8]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[7]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[6]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[5]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[4]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[3]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[2]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[1]" IOSTANDARD = LVCMOS25;
+NET "adc_in1[0]" IOSTANDARD = LVCMOS25;
+#----------------------ADC 2-------------------------
+NET "adc2_clkp" LOC = R3;
+NET "adc2_clkn" LOC = R2;
+NET "adc2_clkn" IOSTANDARD = LVCMOS25;
+NET "adc2_clkp" IOSTANDARD = LVCMOS25;
+
+NET "adc2_clk_out_n" LOC = U1;
+NET "adc2_clk_out_n" IOSTANDARD = LVCMOS25;
+
+NET "adc2_clk_out_p" LOC = T1;
+NET "adc2_clk_out_p" IOSTANDARD = LVCMOS25;
+NET "adc2_clk_out_p" CLOCK_DEDICATED_ROUTE = FALSE;
+############
+NET "adc_in2[0]" LOC = AB8;
+NET "adc_in2[1]" LOC = AA8;
+NET "adc_in2[2]" LOC = AA6;
+NET "adc_in2[3]" LOC = Y6;
+NET "adc_in2[4]" LOC = AB5;
+NET "adc_in2[5]" LOC = AA5;
+NET "adc_in2[6]" LOC = AA3;
+NET "adc_in2[7]" LOC = Y3;
+NET "adc_in2[8]" LOC = AB1;
+NET "adc_in2[9]" LOC = AA1;
+NET "adc_in2[10]" LOC = Y1;
+NET "adc_in2[11]" LOC = W1;
+NET "adc_in2[12]" LOC = V2;
+NET "adc_in2[13]" LOC = U2;
+#
+NET "adc_in2[13]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[12]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[11]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[10]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[9]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[8]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[7]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[6]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[5]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[4]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[3]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[2]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[1]" IOSTANDARD = LVCMOS25;
+NET "adc_in2[0]" IOSTANDARD = LVCMOS25;
+#---------------------------------------------------------------------
+#
+NET "adc3_clkp" LOC = D2;
+NET "adc3_clkn" LOC = E2;
+NET "adc3_clkn" IOSTANDARD = LVTTL;
+NET "adc3_clkp" IOSTANDARD = LVTTL;
+
+NET "adc3_clk_out_n" LOC = A1;
+NET "adc3_clk_out_n" IOSTANDARD = LVTTL;
+
+NET "adc3_clk_out_p" LOC = B1;
+NET "adc3_clk_out_p" IOSTANDARD = LVTTL;
+###########
+NET "adc_in3[0]" LOC = R1;
+NET "adc_in3[1]" LOC = P1;
+NET "adc_in3[2]" LOC = M1;
+NET "adc_in3[3]" LOC = L1;
+NET "adc_in3[4]" LOC = K1;
+NET "adc_in3[5]" LOC = J1;
+NET "adc_in3[6]" LOC = H2;
+NET "adc_in3[7]" LOC = G2;
+NET "adc_in3[8]" LOC = G1;
+NET "adc_in3[9]" LOC = F1;
+NET "adc_in3[10]" LOC =E1;
+NET "adc_in3[11]" LOC = D1;
+NET "adc_in3[12]" LOC = C2;
+NET "adc_in3[13]" LOC = B2;
+
+NET "adc_in3[13]" IOSTANDARD = LVTTL;
+NET "adc_in3[12]" IOSTANDARD = LVTTL;
+NET "adc_in3[11]" IOSTANDARD = LVTTL;
+NET "adc_in3[10]" IOSTANDARD = LVTTL;
+NET "adc_in3[9]" IOSTANDARD = LVTTL;
+NET "adc_in3[8]" IOSTANDARD = LVTTL;
+NET "adc_in3[7]" IOSTANDARD = LVTTL;
+NET "adc_in3[6]" IOSTANDARD = LVTTL;
+NET "adc_in3[5]" IOSTANDARD = LVTTL;
+NET "adc_in3[4]" IOSTANDARD = LVTTL;
+NET "adc_in3[3]" IOSTANDARD = LVTTL;
+NET "adc_in3[2]" IOSTANDARD = LVTTL;
+NET "adc_in3[1]" IOSTANDARD = LVTTL;
+NET "adc_in3[0]" IOSTANDARD = LVTTL;
+###########test pins---------------
+#NET "peak_fifo_empty_test"                LOC = "N3"  |IOSTANDARD=LVCMOS33  ;    #pin 3
+NET "pulse_detect_orig"                LOC = "G3"  |IOSTANDARD=LVCMOS33  ;    #pin 8
+#NET "done_test"                LOC = "N3"  |IOSTANDARD=LVCMOS33  ;    #pin 3
+#--------------------------------------------------------------------------------
+NET "rfd_ch3"          LOC = "M5"  |IOSTANDARD=LVCMOS33  ;    #pin 4  -----radar pulse      ---kenh 1
+NET "dv_ch3"          LOC = "H3"  |IOSTANDARD=LVCMOS33  ;    #pin 7   ---fifo1_rd_en
+
+NET "rfd_test"                  LOC = "L3"  |IOSTANDARD=LVCMOS33  ;    #pin 5
+NET "dv_test"                   LOC = "A13" |IOSTANDARD=LVCMOS33  ;    #pin 10  
+NET "latch_pulse_test"       LOC = "K4"  |IOSTANDARD=LVCMOS33  ;    #pin 6    
+
+
+NET "rfd_ch1"              LOC = "F3"  |IOSTANDARD=LVCMOS33  ;    #pin 9
+NET "dv_ch1" LOC = "A14" |IOSTANDARD=LVCMOS33  ;    #pin 11
+
+
+
+
+
+
+
+
+
+
+

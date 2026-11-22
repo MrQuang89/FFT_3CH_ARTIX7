@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Fri May 09 01:37:28 2025
+# Process ID: 13924
+# Log file: E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/planAhead_run_1/planAhead.log
+# Journal file: E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -97 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/pa.fromNetlist.tcl}
+# create_project -name FTT_512_NEW -dir "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/planAhead_run_1" -part xc7a100tfgg484-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123} {Netlist} {ipcore_dir} }
+# add_files [list {ipcore_dir/FFT_512.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/FFT_OUT_IM.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/fifo_14bits.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/FIFO_OUT_IM.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/FIFO_OUT_RE.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/peak_value_fifo.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "pins_config.ucf" [current_fileset -constrset]
+Adding file 'E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/pins_config.ucf' to fileset 'constrs_1'
+# add_files [list {pins_config.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tfgg484-3
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design top.ngc ...
+WARNING:NetListWriters:298 - No output is written to top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus FFT512_CH1/Result<8 : 0> on block top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus FFT512_CH3/Result<8 : 0> on block top is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file top.edif ...
+ngc2edif: Total memory usage is 4315704 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/top_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/top_ngc_zx.edif]
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fifo_8k.ngc ...
+WARNING:NetListWriters:298 - No output is written to fifo_8k.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file fifo_8k.edif ...
+ngc2edif: Total memory usage is 4315112 kilobytes
+
+Reading core file 'E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/Netlist/fifo_8k.ngc' for (cell view 'fifo_8k', library 'top_lib', file 'top.ngc')
+Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/fifo_8k_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/fifo_8k_ngc_zx.edif]
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design peak_value_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to peak_value_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file peak_value_fifo.edif ...
+ngc2edif: Total memory usage is 4315112 kilobytes
+
+Reading core file 'E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/ipcore_dir/peak_value_fifo.ngc' for (cell view 'peak_value_fifo', library 'top_lib', file 'top.ngc')
+Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/peak_value_fifo_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/peak_value_fifo_ngc_zx.edif]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design binh_phuong_I.ngc ...
+WARNING:NetListWriters:298 - No output is written to binh_phuong_I.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file binh_phuong_I.edif ...
+ngc2edif: Total memory usage is 4315112 kilobytes
+
+Reading core file 'E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123/Netlist/binh_phuong_I.ngc' for (cell view 'binh_phuong_I', library 'top_lib', file 'top.ngc')
+Parsing EDIF File [./planAhead_run_1/FTT_512_NEW.data/cache/binh_phuong_I_ngc_zx.edif]
+INFO: [Common 17-344] 'link_design' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See E:/VHDL-PROJECT/NAM 2025/TEST_NEW_BOARD_03ADC/NEW_CODE_0805/FTT_512_NEW_CH123\planAhead_pid13924.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri May 09 01:37:47 2025...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,646 @@
+Release 14.6 ngdbuild P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd Netlist -sd ipcore_dir -nt timestamp -uc
+pins_config.ucf -p xc7a100t-fgg484-3 top.ngc top.ngd
+
+Reading NGO file "E:/VHDL-PROJECT/NAM
+2025/TEST_NEW_BOARD_03ADC/NEW_CODE_1005/FTT_512_NEW_CH123/top.ngc" ...
+Loading design module "Netlist/udp_ip_rmii.ngc"...
+Loading design module "Netlist/fifo_8k.ngc"...
+Loading design module "ipcore_dir/fifo_14bits.ngc"...
+Loading design module "Netlist/FFT_512.ngc"...
+Loading design module "Netlist/binh_phuong_I.ngc"...
+Loading design module "Netlist/binh_phuong_R.ngc"...
+Loading design module "Netlist/tong_binh_phuong.ngc"...
+Loading design module "Netlist/can_bac_hai.ngc"...
+Loading design module "ipcore_dir/FIFO_OUT_RE.ngc"...
+Loading design module "ipcore_dir/FFT_OUT_IM.ngc"...
+Loading design module "ipcore_dir/peak_value_fifo.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "pins_config.ucf" ...
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH3/U43/blk00000375/blk00000396/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH3/U43/blk000004ff/blk00000522/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH3/U43/blk00000766/blk0000078d/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH2/U42/blk00000375/blk00000396/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH2/U42/blk000004ff/blk00000522/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH2/U42/blk00000766/blk0000078d/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH1/U41/blk00000375/blk00000396/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH1/U41/blk000004ff/blk00000522/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'FFT512_CH1/U41/blk00000766/blk0000078d/RAMB18E1' of type RAMB18E1 has been
+   changed from 'VIRTEX6' to '7SERIES' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file. For additional information on retargeting
+   this primitive to 7SERIES, please see
+   http://www.xilinx.com/support/documentation/sw_manuals/ug429_7Series_Migratio
+   n.pdf.
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:486 - Attribute "EN_ECC_READ" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOA_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOB_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_WRITE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_READ" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOA_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOB_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_WRITE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_READ" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOA_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOB_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_WRITE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_READ" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOA_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "DOB_REG" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "READ_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_A" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "WRITE_WIDTH_B" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:486 - Attribute "EN_ECC_WRITE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbm
+   ga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_noi
+   nit.ram/dpram.dp2x2.ram" of type "RAMB16_S2_S2".  This attribute will be
+   ignored.
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000052' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000057' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000001eb' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000001ec' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000001f6' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000001f7' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000005b9' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000005ba' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000005bb' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000005bc' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000005be' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk000005bf' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000797' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000798' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000799' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000079a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000079b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000079c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000079d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000939' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000093a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000093b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000093c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000093d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000e95' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000e98' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000e99' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00000e9a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000166a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000166c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000166e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001670' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001672' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001674' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001676' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001678' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000167a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000167c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001742' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001744' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001746' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001748' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000174a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000174c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk0000174e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001750' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001752' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH3/U43/blk00001754' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000052' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000057' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000001eb' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000001ec' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000001f6' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000001f7' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000005b9' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000005ba' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000005bb' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000005bc' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000005be' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk000005bf' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000797' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000798' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000799' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000079a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000079b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000079c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000079d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000939' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000093a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000093b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000093c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000093d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000e95' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000e98' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000e99' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00000e9a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000166a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000166c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000166e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001670' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001672' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001674' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001676' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001678' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000167a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000167c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001742' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001744' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001746' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001748' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000174a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000174c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk0000174e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001750' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001752' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH2/U42/blk00001754' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000052' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000057' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000001eb' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000001ec' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000001f6' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000001f7' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000005b9' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000005ba' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000005bb' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000005bc' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000005be' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk000005bf' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000797' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000798' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000799' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000079a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000079b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000079c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000079d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000939' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000093a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000093b' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000093c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000093d' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000e95' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000e98' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000e99' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00000e9a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000166a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000166c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000166e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001670' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001672' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001674' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001676' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001678' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000167a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000167c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001742' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001744' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001746' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001748' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000174a' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000174c' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk0000174e' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001750' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001752' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'FFT512_CH1/U41/blk00001754' has
+   unconnected output pin
+WARNING:NgdBuild:483 - Attribute "INIT" on "FFT512_CH3/U43/sig0000003b" is on
+   the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c02/sig00002180' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c02/sig00002181' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c02/sig00002183' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c02/sig00002184' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c1d/sig000021b9' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c1d/sig000021ba' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00000c1d/sig000021bb' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00001074/sig00002351' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH3/U43/blk00001074/sig00002352' has
+   no driver
+WARNING:NgdBuild:483 - Attribute "INIT" on "FFT512_CH2/U42/sig0000003b" is on
+   the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c02/sig00002180' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c02/sig00002181' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c02/sig00002183' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c02/sig00002184' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c1d/sig000021b9' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c1d/sig000021ba' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00000c1d/sig000021bb' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00001074/sig00002351' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH2/U42/blk00001074/sig00002352' has
+   no driver
+WARNING:NgdBuild:483 - Attribute "INIT" on "FFT512_CH1/U41/sig0000003b" is on
+   the wrong type of object.  Please see the Constraints Guide for more
+   information on this attribute.
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c02/sig00002180' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c02/sig00002181' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c02/sig00002183' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c02/sig00002184' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c1d/sig000021b9' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c1d/sig000021ba' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00000c1d/sig000021bb' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00001074/sig00002351' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'FFT512_CH1/U41/blk00001074/sig00002352' has
+   no driver
+WARNING:NgdBuild:470 - bidirect pad net 'adc3_clk_out_n' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'adc3_clk_out_p' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'adc2_clk_out_n' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'adc2_clk_out_p' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'adc1_clk_out_n' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'adc1_clk_out_p' has no legal driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 221
+
+Total memory usage is 4664688 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  34 sec
+Total CPU time to NGDBUILD completion:   34 sec
+
+Writing NGDBUILD log file "top.bld"...

@@ -1,0 +1,13 @@
+E:\VHDL-PROJECT\NAM 2025\TEST_NEW_BOARD_03ADC\NEW_CODE_1005\FTT_512_NEW_CH123\top.ngc 1759745300
+Netlist/udp_ip_rmii.ngc 1458700556
+Netlist/fifo_8k.ngc 1444213566
+ipcore_dir/fifo_14bits.ngc 1746503009
+Netlist/FFT_512.ngc 1729846022
+Netlist/binh_phuong_I.ngc 1702287932
+Netlist/binh_phuong_R.ngc 1702287986
+Netlist/tong_binh_phuong.ngc 1702520290
+Netlist/can_bac_hai.ngc 1704481210
+ipcore_dir/FIFO_OUT_RE.ngc 1746503222
+ipcore_dir/FFT_OUT_IM.ngc 1746580625
+ipcore_dir/peak_value_fifo.ngc 1746841344
+OK
