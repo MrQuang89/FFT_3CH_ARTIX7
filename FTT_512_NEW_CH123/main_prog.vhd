@@ -71,7 +71,11 @@ component FFT_CH
 Generic (
 	MAG_LATENCY     : natural := 4;
 	TRIGGER_ON_EDGE : boolean := true;
-	NBINS           : natural := 256
+	NBINS           : natural := 256;
+	PM_THRESH       : natural := 600;
+	PM_GAP          : natural := 12;
+	PM_MIN_PW       : natural := 4;
+	ADC_DC          : integer := 0
 );
 Port (
 	clk_in_230 		        : in  STD_LOGIC;
@@ -80,9 +84,23 @@ Port (
 	rfd_test_ch1            : out std_logic;
 	dv_test_ch1             : out std_logic;
 	Latch_pulse_ch1         : out std_logic;
-	Index_Max_Out_Ch1       : out STD_LOGIC_VECTOR (9 downto 0)
+	Index_Max_Out_Ch1       : out STD_LOGIC_VECTOR (9 downto 0);
+	Meas_Valid_Ch1          : out std_logic;
+	Meas_Data_Ch1           : out std_logic_vector(63 downto 0)
 );
 END component;
+--------------------------------------------------------------------------------
+component meas_cdc
+    generic ( W : natural := 64 );
+    port (
+        src_clk   : in  std_logic;
+        src_valid : in  std_logic;
+        src_data  : in  std_logic_vector(W-1 downto 0);
+        dst_clk   : in  std_logic;
+        dst_hold  : in  std_logic;
+        dst_data  : out std_logic_vector(W-1 downto 0)
+    );
+end component;
 --------------------------------------------------------------------------------
 component fifo_fsm_controller
     Port (
@@ -101,6 +119,9 @@ component ethernet
 			data_in_ch1	    	: in STD_LOGIC_VECTOR  (9 downto 0); 
 			data_in_ch2	    	: in STD_LOGIC_VECTOR  (9 downto 0); 
 			data_in_ch3	    	: in STD_LOGIC_VECTOR  (9 downto 0); 
+			meas_ch1	    	: in STD_LOGIC_VECTOR  (63 downto 0);
+			meas_ch2	    	: in STD_LOGIC_VECTOR  (63 downto 0);
+			meas_ch3	    	: in STD_LOGIC_VECTOR  (63 downto 0);
 			--Index_Max_In: in std_logic_vector(8 downto 0);
 			CRS_DV         : in std_logic;
 			RXD            : in std_logic_vector(1 downto 0);
@@ -120,6 +141,14 @@ signal Index_Max_Ch1, Index_Max_Ch2, Index_Max_Ch3 : std_logic_vector(9 downto 0
 signal Latch_pulse_ch1, Latch_pulse_ch2, Latch_pulse_ch3 : std_logic;
 signal Data2Ethernet1, Data2Ethernet2, Data2Ethernet3 : std_logic_vector(9 downto 0);
 signal fifo_rd_en_ethernet, fifo_rd_clk_ethernet: std_logic;
+-- Tham so thoi gian xung: mien 230 MHz tung kenh va mien 50 MHz (sau CDC)
+signal meas_valid_ch1, meas_valid_ch2, meas_valid_ch3 : std_logic;
+signal meas_data_ch1, meas_data_ch2, meas_data_ch3 : std_logic_vector(63 downto 0);
+signal meas50_ch1, meas50_ch2, meas50_ch3 : std_logic_vector(63 downto 0);
+-- Nguong do xung rieng tung kenh (ma ADC, FS = 8192). CHINH THEO MUC NHIEU/TIN HIEU THUC TE
+constant PM_THRESH_CH1 : natural := 600;
+constant PM_THRESH_CH2 : natural := 600;
+constant PM_THRESH_CH3 : natural := 600;
 ------------------------ ADC (da chot theo clock cua tung kenh) ------------------
 signal adc1_valid_data, adc2_valid_data, adc3_valid_data : std_logic_vector(13 downto 0);
 signal rfd_test_ch1, dv_test_ch1 : std_logic;
@@ -203,6 +232,9 @@ Ethernet_unit02:ethernet
 				data_in_ch1	       =>  Data2Ethernet1,
 				data_in_ch2	       =>  Data2Ethernet2,
 				data_in_ch3	       =>  Data2Ethernet3,
+				meas_ch1       =>  meas50_ch1,
+				meas_ch2       =>  meas50_ch2,
+				meas_ch3       =>  meas50_ch3,
 				CRS_DV         =>  CRS_DV_02,
 				RXD            =>  RXD_02,
 				fifo_rd_save   =>  fifo_rd_en_ethernet,
@@ -213,6 +245,7 @@ Ethernet_unit02:ethernet
 				);	
 	-------------------------------------
 FFT512_CH1: FFT_CH
+ GENERIC MAP (PM_THRESH => PM_THRESH_CH1)
  PORT MAP(
 	clk_in_230          => CLK_230_MHZ_CH1,
 	adc_in1_ch1         => adc1_valid_data,
@@ -220,10 +253,18 @@ FFT512_CH1: FFT_CH
 	rfd_test_ch1        => rfd_test_ch1,
 	dv_test_ch1         => dv_test_ch1,
 	Latch_pulse_ch1     => Latch_pulse_ch1,
-	Index_Max_Out_Ch1   => Index_Max_Ch1
+	Index_Max_Out_Ch1   => Index_Max_Ch1,
+	Meas_Valid_Ch1      => meas_valid_ch1,
+	Meas_Data_Ch1       => meas_data_ch1
 );
+-- CDC 230 MHz -> 50 MHz cho tham so xung, dong bang khi Ethernet dang doc
+U_CDC1: meas_cdc
+   generic map (W => 64)
+   port map (src_clk => CLK_230_MHZ_CH1, src_valid => meas_valid_ch1, src_data => meas_data_ch1,
+             dst_clk => CLK_50_MHZ, dst_hold => fifo_rd_en_ethernet, dst_data => meas50_ch1);
 -------------------------------------------------------------
 FFT512_CH2: FFT_CH
+ GENERIC MAP (PM_THRESH => PM_THRESH_CH2)
  PORT MAP(
 	clk_in_230          => CLK_230_MHZ_CH2,
 	adc_in1_ch1         => adc2_valid_data,
@@ -231,10 +272,18 @@ FFT512_CH2: FFT_CH
 	rfd_test_ch1        => rfd_test_ch2,
 	dv_test_ch1         => dv_test_ch2,
 	Latch_pulse_ch1     => Latch_pulse_ch2,
-	Index_Max_Out_Ch1   => Index_Max_Ch2
+	Index_Max_Out_Ch1   => Index_Max_Ch2,
+	Meas_Valid_Ch1      => meas_valid_ch2,
+	Meas_Data_Ch1       => meas_data_ch2
 );
+-- CDC 230 MHz -> 50 MHz cho tham so xung, dong bang khi Ethernet dang doc
+U_CDC2: meas_cdc
+   generic map (W => 64)
+   port map (src_clk => CLK_230_MHZ_CH2, src_valid => meas_valid_ch2, src_data => meas_data_ch2,
+             dst_clk => CLK_50_MHZ, dst_hold => fifo_rd_en_ethernet, dst_data => meas50_ch2);
 ---------------------------------------------
 FFT512_CH3: FFT_CH
+ GENERIC MAP (PM_THRESH => PM_THRESH_CH3)
  PORT MAP(
 	clk_in_230          => CLK_230_MHZ,
 	adc_in1_ch1         => adc3_valid_data,
@@ -242,8 +291,15 @@ FFT512_CH3: FFT_CH
 	rfd_test_ch1        => rfd_test_ch3,
 	dv_test_ch1         => dv_test_ch3,
 	Latch_pulse_ch1     => Latch_pulse_ch3,
-	Index_Max_Out_Ch1   => Index_Max_Ch3
+	Index_Max_Out_Ch1   => Index_Max_Ch3,
+	Meas_Valid_Ch1      => meas_valid_ch3,
+	Meas_Data_Ch1       => meas_data_ch3
 );
+-- CDC 230 MHz -> 50 MHz cho tham so xung, dong bang khi Ethernet dang doc
+U_CDC3: meas_cdc
+   generic map (W => 64)
+   port map (src_clk => CLK_230_MHZ, src_valid => meas_valid_ch3, src_data => meas_data_ch3,
+             dst_clk => CLK_50_MHZ, dst_hold => fifo_rd_en_ethernet, dst_data => meas50_ch3);
 ---------------------------------------------------------
 -- FIFO luu index dinh cua tung kenh (230 MHz -> 50 MHz)
 U111: fifo_fsm_controller

@@ -5,6 +5,11 @@ Phan mem PC kiem tra ket noi + hien thi ket qua FFT 3 kenh gui tu FPGA qua UDP.
 Dinh dang goi (theo Ethernet_module.vhd, payload 256 byte, ~3.3 goi/giay toi da):
   byte0 = 00 | 1: AA | 2: 81 | 3: H1 | 4: L1 | 5: 82 | 6: H2 | 7: L2 | 8: 83 | 9: H3 | 10: L3 | 11..255 = 00
   index_kenh = (H << 7) | L          (H: 0..7, L: 0..127)
+  Tham so thoi gian xung (v2, do truc tiep tu ADC), moi kenh 9 byte tu byte 11:
+    11: 91 | 12-13: PW (16 bit) | 14-15: bit15=LONG, bit13..0=AMP | 16-18: PRI (24 bit) | 19: SEQ
+    20: 92 (CH2, byte 21..28)   29: 93 (CH3, byte 30..37)
+  PW, PRI tinh bang chu ky clock 230 MHz (4.348 ns); PRI = 0xFFFFFF: chua co xung truoc;
+  SEQ tang 1 sau moi xung do duoc (de biet phep do moi).
   tan_so (MHz) = index * 230 / 512 + 460     (lay mau 230 MHz, bang tan so 460..575 MHz)
 
 Cau hinh mang cua FPGA (co dinh trong VHDL):
@@ -23,6 +28,8 @@ import argparse, socket, struct, sys, threading, time, random, collections
 PORT = 1026
 FS_MHZ, BAND_OFFSET_MHZ, NFFT = 230.0, 460.0, 512
 PAYLOAD_LEN = 256
+TICK_NS = 1000.0 / FS_MHZ
+PRI_INVALID = 0xFFFFFF
 CH_COLORS = ("#d62728", "#2ca02c", "#1f77b4")
 
 
@@ -39,6 +46,21 @@ def parse_payload(p):
     return None
 
 
+def parse_meas(p):
+    """Tra ve list 3 dict (hoac None neu goi cu khong co khoi tham so xung)."""
+    out = []
+    for c, base in enumerate((11, 20, 29)):
+        if len(p) < base + 9 or p[base] != 0x91 + c:
+            return None
+        pw = (p[base+1] << 8) | p[base+2]
+        w = (p[base+3] << 8) | p[base+4]
+        pri = (p[base+5] << 16) | (p[base+6] << 8) | p[base+7]
+        out.append(dict(pw_ns=pw * TICK_NS, pw_ticks=pw, long=bool(w & 0x8000), amp=w & 0x3FFF,
+                        pri_us=None if pri == PRI_INVALID else pri * TICK_NS / 1000.0,
+                        seq=p[base+8]))
+    return out
+
+
 class Receiver(threading.Thread):
     def __init__(self, bind_ip, port):
         super().__init__(daemon=True)
@@ -51,6 +73,8 @@ class Receiver(threading.Thread):
         self.src = None
         self.last_len = 0
         self.last = (None, None, None)
+        self.meas = [None, None, None]
+        self.meas_new = [0, 0, 0]       # so xung moi (SEQ thay doi)
         self.changes = [0, 0, 0]
         self.rate_win = collections.deque(maxlen=2000)   # thoi diem nhan goi
         self.hist = [collections.deque(maxlen=1200) for _ in range(3)]  # (t, MHz) 20 mau/s
@@ -83,6 +107,12 @@ class Receiver(threading.Thread):
                     if self.last[c] is not None and res[c] != self.last[c]:
                         self.changes[c] += 1
                 self.last = res
+                m = parse_meas(data)
+                if m:
+                    for c in range(3):
+                        if self.meas[c] is None or m[c]['seq'] != self.meas[c]['seq']:
+                            self.meas_new[c] += 1
+                    self.meas = m
                 if now - self.last_hist_t >= 0.05:
                     self.last_hist_t = now
                     for c in range(3):
@@ -96,6 +126,7 @@ class Receiver(threading.Thread):
             return dict(total=self.total, bad=self.bad, src=self.src, length=self.last_len,
                         last=self.last, changes=list(self.changes), rate=rate,
                         age=(now - self.rate_win[-1]) if self.rate_win else None,
+                        meas=list(self.meas), meas_new=list(self.meas_new),
                         hist=[list(h) for h in self.hist], log=list(self.log))
 
     def stop(self):
@@ -119,6 +150,13 @@ def fmt_ch(idx):
     return "  --  " if idx is None else "%3d  %8.2f MHz" % (idx, idx_to_mhz(idx))
 
 
+def fmt_meas(m):
+    if m is None:
+        return "PW --"
+    pri = "--" if m["pri_us"] is None else "%.1f us (PRF %.0f Hz)" % (m["pri_us"], 1e6 / m["pri_us"])
+    return "PW %.0f ns%s amp %d PRI %s seq %d" % (m["pw_ns"], "(cat)" if m["long"] else "", m["amp"], pri, m["seq"])
+
+
 def run_cli(rx):
     try:
         while True:
@@ -128,6 +166,8 @@ def run_cli(rx):
                 time.strftime("%H:%M:%S"), s["total"], s["bad"], s["rate"],
                 fmt_ch(s["last"][0]), fmt_ch(s["last"][1]), fmt_ch(s["last"][2]),
                 "%s:%d" % s["src"] if s["src"] else "-"), flush=True)
+            for c in range(3):
+                print("      CH%d: %s" % (c + 1, fmt_meas(s["meas"][c])), flush=True)
             if s["total"] == 0 or (s["age"] or 0) > 2:
                 print("   ->", diagnose(s), flush=True)
     except KeyboardInterrupt:
@@ -147,13 +187,14 @@ def run_gui(rx):
     diag_lbl.pack(anchor="w", padx=8, pady=4)
 
     frm = ttk.Frame(root); frm.pack(fill="x", padx=8)
-    cols = ("kenh", "index", "tan so (MHz)", "so lan doi")
+    root.geometry("1000x620")
+    cols = ("kenh", "index", "tan so (MHz)", "PW (ns)", "bien do", "PRI (us)", "PRF (Hz)", "SEQ", "so xung")
     tv = ttk.Treeview(frm, columns=cols, show="headings", height=3)
-    for c, w in zip(cols, (80, 100, 160, 120)):
+    for c, w in zip(cols, (60, 60, 100, 80, 70, 90, 80, 50, 70)):
         tv.heading(c, text=c); tv.column(c, width=w, anchor="center")
     tv.pack(side="left")
     for i in range(3):
-        tv.insert("", "end", iid=str(i), values=("CH%d" % (i + 1), "-", "-", 0))
+        tv.insert("", "end", iid=str(i), values=("CH%d" % (i + 1),) + ("-",) * 8)
 
     lg = tk.Text(root, height=4, font=("Consolas", 9)); lg.pack(fill="x", padx=8, pady=4)
     cv = tk.Canvas(root, bg="white", highlightthickness=1, highlightbackground="#999")
@@ -192,8 +233,14 @@ def run_gui(rx):
         diag_lbl.configure(foreground="#0a7d2c" if msg.startswith("Ket noi OK") else "#c0392b")
         for i in range(3):
             idx = s["last"][i]
+            m = s["meas"][i]
             tv.item(str(i), values=("CH%d" % (i + 1), "-" if idx is None else idx,
-                                    "-" if idx is None else "%.2f" % idx_to_mhz(idx), s["changes"][i]))
+                                    "-" if idx is None else "%.2f" % idx_to_mhz(idx),
+                                    "-" if m is None else "%.0f%s" % (m["pw_ns"], "*" if m["long"] else ""),
+                                    "-" if m is None else m["amp"],
+                                    "-" if m is None or m["pri_us"] is None else "%.1f" % m["pri_us"],
+                                    "-" if m is None or m["pri_us"] is None else "%.0f" % (1e6 / m["pri_us"]),
+                                    "-" if m is None else m["seq"], s["meas_new"][i]))
         lg.delete("1.0", "end"); lg.insert("end", "\n".join(s["log"][-4:]))
         draw(s)
         root.after(100, tick)
@@ -216,6 +263,13 @@ def run_simulator(host, port):
             p = bytearray(PAYLOAD_LEN)
             p[0:11] = bytes([0x00, 0xAA, 0x81, idxs[0] >> 7, idxs[0] & 0x7F, 0x82, idxs[1] >> 7,
                              idxs[1] & 0x7F, 0x83, idxs[2] >> 7, idxs[2] & 0x7F])
+            for c in range(3):                      # tham so xung gia lap: PW 200..800 ns, PRI 1 ms
+                pw = int((200 + 150 * c + 20 * __import__("math").sin(now)) / TICK_NS)
+                pri = int(1e6 * (1 + c) / TICK_NS)
+                seq = int(now * 1000 / (1 + c)) & 0xFF
+                off = 11 + 9 * c
+                p[off:off+9] = bytes([0x91 + c, pw >> 8, pw & 0xFF, 0x07, 0xD0 + c,
+                                        (pri >> 16) & 0xFF, (pri >> 8) & 0xFF, pri & 0xFF, seq])
             s.sendto(bytes(p), (host, port))
             time.sleep(0.003)   # ~300 goi/s
     except KeyboardInterrupt:

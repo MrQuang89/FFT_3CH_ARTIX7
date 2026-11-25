@@ -15,6 +15,10 @@ entity ethernet is
 			data_in_ch1	: in STD_LOGIC_VECTOR  (9 downto 0);
 			data_in_ch2	: in STD_LOGIC_VECTOR  (9 downto 0);
 			data_in_ch3	: in STD_LOGIC_VECTOR  (9 downto 0);
+			-- tham so thoi gian xung (da o mien 50 MHz, dong bang khi dang gui)
+			meas_ch1	: in STD_LOGIC_VECTOR  (63 downto 0);
+			meas_ch2	: in STD_LOGIC_VECTOR  (63 downto 0);
+			meas_ch3	: in STD_LOGIC_VECTOR  (63 downto 0);
 --			data_in_ch2		: in STD_LOGIC_VECTOR  (9 downto 0); 	
 --			data_in_ch3	    	: in STD_LOGIC_VECTOR  (9 downto 0); 
 			--Index_Max_In: in std_logic_vector(8 downto 0);
@@ -497,37 +501,55 @@ begin
 	-- end process;
 	 
 	 	process(data,Byte2_Index, Byte3_Index,Byte4_Index,
-				Byte5_Index,Byte6_Index, Byte7_Index)
+				Byte5_Index,Byte6_Index, Byte7_Index, meas_ch1, meas_ch2, meas_ch3)
+			-- Khuon dang payload (byte 0..37), con lai = 0:
+			--  0:00 1:AA 2:81 3:H1 4:L1 5:82 6:H2 7:L2 8:83 9:H3 10:L3     (tan so, nhu cu)
+			--  11:91 12-13:PW1 14-15:LONG/AMP1 16-18:PRI1 19:SEQ1          (kenh 1)
+			--  20:92 ... 28 (kenh 2)     29:93 ... 37 (kenh 3)
 			begin
-			if(data=1)then	
-				fifo_din <=X"AA";
-			elsif(data=2)then
-				fifo_din <=X"81";
-			elsif(data=3)then	
-				fifo_din<= Byte2_Index;
-			elsif(data=4) then
-				fifo_din<= Byte3_Index;
-				----------------------
-			elsif(data=5)then
-				fifo_din <=X"82";
-			elsif(data=6)then	
-				fifo_din<= Byte4_Index;
-			elsif(data=7) then
-				fifo_din<= Byte5_Index;
---				---------------------
-			elsif(data=8)then
-				fifo_din <=X"83";
-			elsif(data=9)then	
-				fifo_din<= Byte6_Index;
-			elsif(data=10) then
-				fifo_din<= Byte7_Index;	
-			else
-				fifo_din<= X"00";
-			end if;
+			case data is
+				when 1  => fifo_din <= X"AA";
+				when 2  => fifo_din <= X"81";
+				when 3  => fifo_din <= Byte2_Index;
+				when 4  => fifo_din <= Byte3_Index;
+				when 5  => fifo_din <= X"82";
+				when 6  => fifo_din <= Byte4_Index;
+				when 7  => fifo_din <= Byte5_Index;
+				when 8  => fifo_din <= X"83";
+				when 9  => fifo_din <= Byte6_Index;
+				when 10 => fifo_din <= Byte7_Index;
+				-- kenh 1
+				when 11 => fifo_din <= X"91";
+				when 12 => fifo_din <= meas_ch1(63 downto 56);
+				when 13 => fifo_din <= meas_ch1(55 downto 48);
+				when 14 => fifo_din <= meas_ch1(47 downto 40);
+				when 15 => fifo_din <= meas_ch1(39 downto 32);
+				when 16 => fifo_din <= meas_ch1(31 downto 24);
+				when 17 => fifo_din <= meas_ch1(23 downto 16);
+				when 18 => fifo_din <= meas_ch1(15 downto 8);
+				when 19 => fifo_din <= meas_ch1(7 downto 0);
+				-- kenh 2
+				when 20 => fifo_din <= X"92";
+				when 21 => fifo_din <= meas_ch2(63 downto 56);
+				when 22 => fifo_din <= meas_ch2(55 downto 48);
+				when 23 => fifo_din <= meas_ch2(47 downto 40);
+				when 24 => fifo_din <= meas_ch2(39 downto 32);
+				when 25 => fifo_din <= meas_ch2(31 downto 24);
+				when 26 => fifo_din <= meas_ch2(23 downto 16);
+				when 27 => fifo_din <= meas_ch2(15 downto 8);
+				when 28 => fifo_din <= meas_ch2(7 downto 0);
+				-- kenh 3
+				when 29 => fifo_din <= X"93";
+				when 30 => fifo_din <= meas_ch3(63 downto 56);
+				when 31 => fifo_din <= meas_ch3(55 downto 48);
+				when 32 => fifo_din <= meas_ch3(47 downto 40);
+				when 33 => fifo_din <= meas_ch3(39 downto 32);
+				when 34 => fifo_din <= meas_ch3(31 downto 24);
+				when 35 => fifo_din <= meas_ch3(23 downto 16);
+				when 36 => fifo_din <= meas_ch3(15 downto 8);
+				when 37 => fifo_din <= meas_ch3(7 downto 0);
+				when others => fifo_din <= X"00";
+			end case;
 		end process;
-	 
-	 
-	 
-	 
 	 
 end Behavioral;

@@ -27,7 +27,12 @@ entity FFT_CH is
         -- false: chay lien tuc khi pulse_detect = '1' (hanh vi cu)
         TRIGGER_ON_EDGE : boolean := true;
         -- So bin (tinh tu bin 0) duoc dung de tim dinh (512 diem -> 256 bin duong)
-        NBINS           : natural := 256
+        NBINS           : natural := 256;
+        -- Tham so do thoi gian xung (xem pulse_measure.vhd)
+        PM_THRESH       : natural := 600;
+        PM_GAP          : natural := 12;
+        PM_MIN_PW       : natural := 4;
+        ADC_DC          : integer := 0
     );
     Port (  clk_in_230          : in  STD_LOGIC;
             adc_in1_ch1         : in  STD_LOGIC_VECTOR (13 downto 0);
@@ -35,7 +40,10 @@ entity FFT_CH is
             rfd_test_ch1        : out std_logic;
             dv_test_ch1         : out std_logic;
             Latch_pulse_ch1     : out std_logic;
-            Index_Max_Out_Ch1   : out STD_LOGIC_VECTOR (9 downto 0)
+            Index_Max_Out_Ch1   : out STD_LOGIC_VECTOR (9 downto 0);
+            -- Ket qua do thoi gian xung (1 xung meas_valid moi xung RF do duoc)
+            Meas_Valid_Ch1      : out std_logic;
+            Meas_Data_Ch1       : out std_logic_vector(63 downto 0)
     );
 end FFT_CH;
 
@@ -144,6 +152,22 @@ architecture Behavioral of FFT_CH is
       );
     END COMPONENT;
 
+    COMPONENT pulse_measure
+      GENERIC (
+        THRESH : natural;
+        GAP    : natural;
+        MIN_PW : natural;
+        MAX_PW : natural;
+        ADC_DC : integer
+      );
+      PORT (
+        clk        : IN  STD_LOGIC;
+        adc        : IN  STD_LOGIC_VECTOR(13 DOWNTO 0);
+        meas_valid : OUT STD_LOGIC;
+        meas_data  : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+      );
+    END COMPONENT;
+
     ---------------------------- FSM -----------------------------------------
     type state_t is (S_IDLE, S_CAPTURE, S_PREFETCH, S_START, S_LOAD,
                      S_UNLOAD, S_SETTLE, S_SEARCH, S_FINISH);
@@ -212,6 +236,22 @@ begin
     dv_test_ch1       <= fft_dv;
     Latch_pulse_ch1   <= latch_pulse_r;
     Index_Max_Out_Ch1 <= index_out;
+
+    ------------------------- Do thoi gian xung tu ADC ------------------------
+    U_PM : pulse_measure
+      GENERIC MAP (
+        THRESH => PM_THRESH,
+        GAP    => PM_GAP,
+        MIN_PW => PM_MIN_PW,
+        MAX_PW => 60000,
+        ADC_DC => ADC_DC
+      )
+      PORT MAP (
+        clk        => clk,
+        adc        => adc_in1_ch1,
+        meas_valid => Meas_Valid_Ch1,
+        meas_data  => Meas_Data_Ch1
+      );
 
     ------------------------- trigger ----------------------------------------
     trigger <= (pulse_sync(1) and not pulse_sync(2)) when TRIGGER_ON_EDGE
