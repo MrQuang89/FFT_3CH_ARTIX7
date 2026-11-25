@@ -31,11 +31,16 @@ entity pulse_measure is
         GAP    : natural := 12;     -- so mau duong bao < THRESH lien tiep de ket thuc xung (>= 1)
         MIN_PW : natural := 4;      -- xung ngan hon (so mau) bi coi la nhieu
         MAX_PW : natural := 60000;  -- xung dai hon bi cat (<= 65535)
-        ADC_DC : integer := 0       -- ma DC cua ADC (0 neu ADC ra bu 2; 8192 neu offset binary da doi dau)
+        ADC_DC : integer := 0;      -- ma DC cua ADC (0 neu ADC ra bu 2; 8192 neu offset binary da doi dau)
+        -- So mau duong bao >= THRESH LIEN TIEP can co truoc khi phat trig (>= 2).
+        -- Nhieu ngan (1 mau) cho duong bao >= THRESH dung 8 mau (cua so max) nen
+        -- TRIG_CONFIRM > 8 loc duoc xung nhieu don le.
+        TRIG_CONFIRM : natural := 16
     );
     port (
         clk        : in  std_logic;
         adc        : in  std_logic_vector(13 downto 0);   -- so co dau (bu 2)
+        trig       : out std_logic;                       -- xung 1 chu ky: phat hien xung RF (dung de kich FFT)
         meas_valid : out std_logic;
         meas_data  : out std_logic_vector(63 downto 0)
     );
@@ -62,6 +67,9 @@ architecture rtl of pulse_measure is
     signal pri_lat   : unsigned(23 downto 0) := (others => '1');
     signal seq       : unsigned(7 downto 0) := (others => '0');
     signal valid_r   : std_logic := '0';
+    signal trig_r    : std_logic := '0';
+    signal fired     : std_logic := '0';
+    signal run_cnt   : integer range 0 to 65535 := 0;
     signal data_r    : std_logic_vector(63 downto 0) := (others => '0');
 
     function umax(a, b : unsigned) return unsigned is
@@ -71,6 +79,7 @@ architecture rtl of pulse_measure is
 
 begin
 
+    trig       <= trig_r;
     meas_valid <= valid_r;
     meas_data  <= data_r;
 
@@ -115,6 +124,7 @@ begin
             -- 3) may trang thai do xung
             ------------------------------------------------------------------
             valid_r <= '0';
+            trig_r  <= '0';
             if since_last /= x"FFFFFF" then
                 since_last <= since_last + 1;
             end if;
@@ -128,6 +138,8 @@ begin
                         gap_cnt <= 0;
                         peak    <= env;
                         pri_lat <= since_last;
+                        run_cnt <= 1;
+                        fired   <= '0';
                     end if;
 
                 when S_PULSE =>
@@ -135,6 +147,18 @@ begin
                     el_cnt <= e;
                     if env > peak then
                         peak <= env;
+                    end if;
+                    -- dem so mau lien tiep tren nguong -> phat trig 1 lan cho moi xung
+                    if env >= THRESH then
+                        if run_cnt < 65535 then
+                            run_cnt <= run_cnt + 1;
+                        end if;
+                        if run_cnt + 1 = TRIG_CONFIRM and fired = '0' then
+                            trig_r <= '1';
+                            fired  <= '1';
+                        end if;
+                    else
+                        run_cnt <= 0;
                     end if;
                     if env >= THRESH then
                         last_el <= e;

@@ -23,8 +23,8 @@ begin
     clk <= not clk after 2.174 ns;   -- 230 MHz
 
     dut : entity work.pulse_measure
-        generic map (THRESH => 600, GAP => 12, MIN_PW => 4, MAX_PW => 60000, ADC_DC => 0)
-        port map (clk => clk, adc => adc, meas_valid => mv, meas_data => md);
+        generic map (THRESH => 600, GAP => 12, MIN_PW => 4, MAX_PW => 60000, ADC_DC => 0, TRIG_CONFIRM => 16)
+        port map (clk => clk, adc => adc, trig => open, meas_valid => mv, meas_data => md);
 
     -- tin hieu: RF alias 0.2 chu ky/mau, bien do 2000, xung chu nhat
     stim : process (clk)

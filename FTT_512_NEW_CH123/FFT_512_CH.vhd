@@ -32,7 +32,12 @@ entity FFT_CH is
         PM_THRESH       : natural := 600;
         PM_GAP          : natural := 12;
         PM_MIN_PW       : natural := 4;
-        ADC_DC          : integer := 0
+        ADC_DC          : integer := 0;
+        -- Nguon kich FFT: 1 = xung phat hien tu du lieu ADC (pulse_measure),
+        --                 0 = chan pulse_detect ben ngoai (hanh vi cu)
+        TRIG_SOURCE     : natural := 1;
+        TRIG_CONFIRM    : natural := 16;   -- so mau duong bao lien tiep tren nguong de xac nhan xung
+        TRIG_PRE        : natural := 8     -- so mau TRUOC mau dau tien tren nguong duoc dua vao khung FFT
     );
     Port (  clk_in_230          : in  STD_LOGIC;
             adc_in1_ch1         : in  STD_LOGIC_VECTOR (13 downto 0);
@@ -158,11 +163,13 @@ architecture Behavioral of FFT_CH is
         GAP    : natural;
         MIN_PW : natural;
         MAX_PW : natural;
-        ADC_DC : integer
+        ADC_DC : integer;
+        TRIG_CONFIRM : natural
       );
       PORT (
         clk        : IN  STD_LOGIC;
         adc        : IN  STD_LOGIC_VECTOR(13 DOWNTO 0);
+        trig       : OUT STD_LOGIC;
         meas_valid : OUT STD_LOGIC;
         meas_data  : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
       );
@@ -174,6 +181,15 @@ architecture Behavioral of FFT_CH is
     signal state : state_t := S_IDLE;
 
     signal clk : std_logic;
+
+    -- Do tre them vao duong ADC -> FIFO de khung FFT bat dau TRUOC xung:
+    --  pipeline pulse_measure (4) + xac nhan (TRIG_CONFIRM) + trig_r->FSM (1)
+    --  = TRIG_CONFIRM + 5 chu ky sau mau dau tien tren nguong; them TRIG_PRE mau dem.
+    constant PRE_DELAY : natural := TRIG_CONFIRM + 5 + TRIG_PRE;
+    type adc_dly_t is array (0 to PRE_DELAY - 1) of std_logic_vector(13 downto 0);
+    signal adc_dly  : adc_dly_t := (others => (others => '0'));
+    signal adc_cap  : std_logic_vector(13 downto 0);
+    signal pm_trig  : std_logic;
 
     -- dong bo hoa pulse_detect (bat dong bo) vao clk
     signal pulse_sync : std_logic_vector(2 downto 0) := (others => '0');
@@ -244,18 +260,40 @@ begin
         GAP    => PM_GAP,
         MIN_PW => PM_MIN_PW,
         MAX_PW => 60000,
-        ADC_DC => ADC_DC
+        ADC_DC => ADC_DC,
+        TRIG_CONFIRM => TRIG_CONFIRM
       )
       PORT MAP (
         clk        => clk,
         adc        => adc_in1_ch1,
+        trig       => pm_trig,
         meas_valid => Meas_Valid_Ch1,
         meas_data  => Meas_Data_Ch1
       );
 
     ------------------------- trigger ----------------------------------------
-    trigger <= (pulse_sync(1) and not pulse_sync(2)) when TRIGGER_ON_EDGE
-               else pulse_sync(1);
+    gen_trig_adc : if TRIG_SOURCE = 1 generate
+        -- Kich tu xung phat hien tren du lieu ADC cua chinh kenh nay
+        trigger <= pm_trig;
+        -- ADC tre PRE_DELAY mau de khung FFT bao phu ca phan dau xung
+        process (clk)
+        begin
+            if rising_edge(clk) then
+                adc_dly(0) <= adc_in1_ch1;
+                for i in 1 to PRE_DELAY - 1 loop
+                    adc_dly(i) <= adc_dly(i - 1);
+                end loop;
+            end if;
+        end process;
+        adc_cap <= adc_dly(PRE_DELAY - 1);
+    end generate;
+
+    gen_trig_ext : if TRIG_SOURCE /= 1 generate
+        -- Kich tu chan pulse_detect (hanh vi cu)
+        trigger <= (pulse_sync(1) and not pulse_sync(2)) when TRIGGER_ON_EDGE
+                   else pulse_sync(1);
+        adc_cap <= adc_in1_ch1;
+    end generate;
 
     ------------------------- FFT core ---------------------------------------
     U_FFT : FFT_512
@@ -365,7 +403,7 @@ begin
             latch_pulse_r <= '0';
 
             -- du lieu luon chay qua thanh ghi
-            in_din     <= adc_in1_ch1;
+            in_din     <= adc_cap;
             save_r_din <= xk_re;
             save_i_din <= xk_im;
 

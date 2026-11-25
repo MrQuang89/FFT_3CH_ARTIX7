@@ -75,7 +75,10 @@ Generic (
 	PM_THRESH       : natural := 600;
 	PM_GAP          : natural := 12;
 	PM_MIN_PW       : natural := 4;
-	ADC_DC          : integer := 0
+	ADC_DC          : integer := 0;
+	TRIG_SOURCE     : natural := 1;
+	TRIG_CONFIRM    : natural := 16;
+	TRIG_PRE        : natural := 8
 );
 Port (
 	clk_in_230 		        : in  STD_LOGIC;
@@ -145,6 +148,8 @@ signal fifo_rd_en_ethernet, fifo_rd_clk_ethernet: std_logic;
 signal meas_valid_ch1, meas_valid_ch2, meas_valid_ch3 : std_logic;
 signal meas_data_ch1, meas_data_ch2, meas_data_ch3 : std_logic_vector(63 downto 0);
 signal meas50_ch1, meas50_ch2, meas50_ch3 : std_logic_vector(63 downto 0);
+-- Nguon kich FFT: 1 = tu du lieu ADC cua tung kenh, 0 = chan pulse_detect ngoai (cu)
+constant TRIG_SRC : natural := 1;
 -- Nguong do xung rieng tung kenh (ma ADC, FS = 8192). CHINH THEO MUC NHIEU/TIN HIEU THUC TE
 constant PM_THRESH_CH1 : natural := 600;
 constant PM_THRESH_CH2 : natural := 600;
@@ -245,7 +250,7 @@ Ethernet_unit02:ethernet
 				);	
 	-------------------------------------
 FFT512_CH1: FFT_CH
- GENERIC MAP (PM_THRESH => PM_THRESH_CH1)
+ GENERIC MAP (PM_THRESH => PM_THRESH_CH1, TRIG_SOURCE => TRIG_SRC)
  PORT MAP(
 	clk_in_230          => CLK_230_MHZ_CH1,
 	adc_in1_ch1         => adc1_valid_data,
@@ -264,7 +269,7 @@ U_CDC1: meas_cdc
              dst_clk => CLK_50_MHZ, dst_hold => fifo_rd_en_ethernet, dst_data => meas50_ch1);
 -------------------------------------------------------------
 FFT512_CH2: FFT_CH
- GENERIC MAP (PM_THRESH => PM_THRESH_CH2)
+ GENERIC MAP (PM_THRESH => PM_THRESH_CH2, TRIG_SOURCE => TRIG_SRC)
  PORT MAP(
 	clk_in_230          => CLK_230_MHZ_CH2,
 	adc_in1_ch1         => adc2_valid_data,
@@ -283,7 +288,7 @@ U_CDC2: meas_cdc
              dst_clk => CLK_50_MHZ, dst_hold => fifo_rd_en_ethernet, dst_data => meas50_ch2);
 ---------------------------------------------
 FFT512_CH3: FFT_CH
- GENERIC MAP (PM_THRESH => PM_THRESH_CH3)
+ GENERIC MAP (PM_THRESH => PM_THRESH_CH3, TRIG_SOURCE => TRIG_SRC)
  PORT MAP(
 	clk_in_230          => CLK_230_MHZ,
 	adc_in1_ch1         => adc3_valid_data,
